@@ -25,9 +25,6 @@ const NavBar = () => {
               <Link to="/studentForm" className="btn btn-danger">
                 Add Student
               </Link>
-              <Link to="/register" className="btn btn-danger">
-                Register 
-              </Link>
               <div className="px-3">
                 <img
                   className="rounded-circle"

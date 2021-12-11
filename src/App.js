@@ -4,9 +4,6 @@ import "./styles/App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Student from "./components/students/Student";
 import StudentForm from "./components/students/StudentForm";
-import Register from "./pages/Register/Register";
-import Login from "./pages/Login/Login";
-import AuthProvider from "./context/AuthContext";
 
 function App() {
   return (
@@ -18,8 +15,6 @@ function App() {
             <Routes>
               <Route path="/" element={<Students />} />
               <Route path="/student/:id" element={<Student />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/login" element={<Login />} />
               <Route path="/studentForm" element={<StudentForm />} />
               <Route path="/studentForm/:id" element={<StudentForm />} />
             </Routes>
