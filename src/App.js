@@ -1,23 +1,31 @@
-import Students from "./components/students/Students";
 import NavBar from "./layout/NavBar/NavBar";
 import "./styles/App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Student from "./components/students/Student";
-import StudentForm from "./components/students/StudentForm";
-
+import Home from "./pages/Home/Home";
+import Profile from "./pages/Profile/Profile";
+import AddRecipe from "./pages/AddRecipe/AddRecipe";
+import Food from "./pages/Food/Food";
+import Favourites from "./pages/Favourites/Favourites";
+// import Login from "./pages/Login/Login";
+// import Register from "./pages/Register/Register";
+// IN THE NAME OF ALLAH
 function App() {
   return (
     <>
       <Router>
         <div className="App">
-          {/* <h1>In the name of Allah</h1> */}
-            <NavBar />
-            <Routes>
-              <Route path="/" element={<Students />} />
-              <Route path="/student/:id" element={<Student />} />
-              <Route path="/studentForm" element={<StudentForm />} />
-              <Route path="/studentForm/:id" element={<StudentForm />} />
-            </Routes>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/food" element={<Food />} />
+            <Route path="/addRecipe" element={<AddRecipe />} />
+            <Route path="/addRecipe/:id" element={<AddRecipe />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile/:id" element={<Profile />} />
+            <Route path="/favourites" element={<Favourites />} />
+            {/* <Route path="/login" element={<Login />} /> */}
+            {/* <Route path="/register" element={<Register />} /> */}
+          </Routes>
         </div>
       </Router>
     </>
